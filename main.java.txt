@@ -1,0 +1,56 @@
+class Main {
+  public static void main(String[] args) {
+    int height = 5; 
+    for (int i = 0; i < height; i++) 
+    { 
+        System.out.printf("P"); 
+        for (int p = 0; p < height; p++)  
+        { 
+            if ((i == 0 || i == height / 2) 
+                && p < height - 1) 
+                System.out.printf("P"); 
+            else if (i < height / 2
+                    && p == height - 1 && i != 0) 
+                System.out.printf("P"); 
+            else
+                System.out.printf(" "); 
+        } 
+        System.out.printf("   "); 
+         for (int s = 0; s < height; s++)  
+        { 
+            if ((i == 0 || i == height / 2
+                || i == height - 1)) 
+                System.out.printf("S"); 
+            else if (i < height / 2
+                    && s == 0) 
+                System.out.printf("S"); 
+            else if (i > height / 2
+                    && s == height - 1) 
+                System.out.printf("S"); 
+            else
+                System.out.printf(" "); 
+        } 
+        System.out.printf("   ");
+        if(i==0){
+          System.out.printf("U    U"); 
+        } 
+        if (i != 0 && i != height - 1) 
+            System.out.printf("U"); 
+        else
+            System.out.printf(" "); 
+        for (int u = 0; u < height; u++)  
+        { 
+            if (((i == height - 1) 
+                && u >= 0
+                && u < height - 1)) 
+                System.out.printf("U"); 
+            else if (u == height - 1 && i != 0
+                    && i != height - 1) 
+                System.out.printf("U"); 
+            else
+                System.out.printf(" "); 
+        } 
+        System.out.printf("\n"); 
+    }   
+  }
+}
